@@ -1,11 +1,11 @@
 <?php
 /**
  * Plugin Name:       Sprachen Switcher
- * Description:       Example block scaffolded with Create Block tool.
+ * Description:       Zeigt den selbstgemachten Sprachen-Switcher für Polylang an.
  * Version:           0.1.0
  * Requires at least: 6.7
  * Requires PHP:      7.4
- * Author:            The WordPress Contributors
+ * Author:            Simon Flöter
  * License:           GPL-2.0-or-later
  * License URI:       https://www.gnu.org/licenses/gpl-2.0.html
  * Text Domain:       sprachenswitcher

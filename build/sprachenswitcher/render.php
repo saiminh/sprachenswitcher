@@ -17,9 +17,7 @@
     print_r($langs_array);
     echo ' -->';
   } ?>
-    <p class="lang-switcher">
-      <?php foreach ($langs_array as $lang) : ?>
-        <a class="lang_<?php esc_html_e( $lang['slug']); ?>" href="<?php esc_html_e( $lang['url'] ); ?>"><?php esc_html_e( $lang['name'] ); ?></a>
-      <?php endforeach; ?>
-    </p>
+  <?php foreach ($langs_array as $lang) : ?>
+    <a class="lang_<?php esc_html_e( $lang['slug']); ?>" href="<?php esc_html_e( $lang['url'] ); ?>"><?php esc_html_e( $lang['name'] ); ?></a>
+  <?php endforeach; ?>
 </div>

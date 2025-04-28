@@ -2,7 +2,7 @@
 /* Begin Language Switcher Custom */
 /* -------------------------- */
 @media (min-width: 600px) {
-  .lang-switcher {
+  .wp-block-create-block-sprachenswitcher {
     position: relative;
     display: flex;
     padding: 0 0 0 1rem;
@@ -48,37 +48,37 @@
 
   html[lang="de-DE"] {
   
-    & .lang-switcher .lang_de {
+    & .wp-block-create-block-sprachenswitcher .lang_de {
       opacity: 1;
       z-index: 1;
     }
-    & .lang-switcher:hover .lang_de {
+    & .wp-block-create-block-sprachenswitcher:hover .lang_de {
       animation: flagout 0.3s ease forwards;
     }
-    & .lang-switcher .lang_en {
+    & .wp-block-create-block-sprachenswitcher .lang_en {
       z-index: 2;
       opacity: 0;
       transform: translateX(-100%);
     }
-    & .lang-switcher:hover .lang_en {
+    & .wp-block-create-block-sprachenswitcher:hover .lang_en {
       animation: flagin 0.3s ease forwards;    
     }
   }
   html[lang="en-GB"], 
   html[lang="en-US"] {
-    & .lang-switcher .lang_en {
+    & .wp-block-create-block-sprachenswitcher .lang_en {
       opacity: 1;
       z-index: 1;
     }
-    & .lang-switcher:hover .lang_en {
+    & .wp-block-create-block-sprachenswitcher:hover .lang_en {
       animation: flagout 0.3s ease forwards;
     }
-    & .lang-switcher .lang_de {
+    & .wp-block-create-block-sprachenswitcher .lang_de {
       z-index: 2;
       opacity: 0;
       transform: translateX(-100%);
     }
-    & .lang-switcher:hover .lang_de {
+    & .wp-block-create-block-sprachenswitcher:hover .lang_de {
       animation: flagin 0.3s ease forwards;    
     }
   }
@@ -108,7 +108,7 @@
 }
 @media (max-width: 599.9px) {
 
-  .lang-switcher {
+  .wp-block-create-block-sprachenswitcher {
     position: relative;
     display: flex;
     gap: 1rem;
@@ -117,7 +117,7 @@
     z-index: 100001;
     opacity: 0;
   }
-  .fixednav:has( .is-menu-open) .lang-switcher {
+  .fixednav:has( .is-menu-open) .wp-block-create-block-sprachenswitcher {
     opacity: 1;
     position: fixed;
     background-color: var(--wp--preset--color--contrast);
@@ -129,13 +129,13 @@
 
   html[lang="de-DE"] {
   
-    & .lang-switcher .lang_de {
+    & .wp-block-create-block-sprachenswitcher .lang_de {
       z-index: 1;
       opacity: .75;
       border-bottom: 2px solid;
       pointer-events: none;
     }
-    & .lang-switcher .lang_en {
+    & .wp-block-create-block-sprachenswitcher .lang_en {
       opacity: 1;
       z-index: 2;
       border-bottom: 2px solid transparent;
@@ -143,24 +143,24 @@
   }
   html[lang="en-GB"], 
   html[lang="en-US"] {
-    & .lang-switcher .lang_en {
+    & .wp-block-create-block-sprachenswitcher .lang_en {
       z-index: 1;
       opacity: .75;
       border-bottom: 2px solid;
       pointer-events: none;
     }
-    & .lang-switcher .lang_de {
+    & .wp-block-create-block-sprachenswitcher .lang_de {
       opacity: 1;
       z-index: 2;
       border-bottom: 2px solid transparent;
     }
   }
 
-  .is-layout-flex:has(.wp-block-navigation + .lang-switcher) {
+  .is-layout-flex:has(.wp-block-navigation + .wp-block-create-block-sprachenswitcher) {
     & .wp-block-navigation {
       order: 2;
     }
-    & .lang-switcher {
+    & .wp-block-create-block-sprachenswitcher {
       order: 1;
       margin: 0 .5rem 0 0;
     }
