@@ -1,0 +1,174 @@
+/* -------------------------- */
+/* Begin Language Switcher Custom */
+/* -------------------------- */
+@media (min-width: 600px) {
+  .lang-switcher {
+    position: relative;
+    display: flex;
+    padding: 0 0 0 1rem;
+    width: 1.25rem;
+    height: 1em;
+  
+    @media (max-width: 599.9px) {
+      order: -1;
+      right: 1rem;
+    }
+  }
+  .lang_de, .lang_en {
+    width: 1.25rem;
+    height: 1rem;
+    overflow: hidden;
+    text-indent: -9999px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: block;
+    border-radius: 20%;
+    border: 3px solid #FFF;
+    /* box-shadow: 0 2px 10px #00000033; */
+  
+    &:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+  }
+  .lang_de:after {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 24"><rect width="36" height="8" fill="black"/><rect y="8" width="36" height="8" fill="red"/><rect y="16" width="36" height="8" fill="gold"/></svg>');
+  }
+  .lang_en:after {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 50 30' width='1000' height='600'%3E%3CclipPath id='t'%3E%3Cpath d='M25,15h25v15zv15h-25zh-25v-15zv-15h25z'/%3E%3C/clipPath%3E%3Cpath d='M0,0v30h50v-30z' fill='%23012169'/%3E%3Cpath d='M0,0 50,30M50,0 0,30' stroke='%23fff' stroke-width='6'/%3E%3Cpath d='M0,0 50,30M50,0 0,30' clip-path='url(%23t)' stroke='%23C8102E' stroke-width='4'/%3E%3Cpath d='M-1 11h22v-12h8v12h22v8h-22v12h-8v-12h-22z' fill='%23C8102E' stroke='%23FFF' stroke-width='2'/%3E%3C/svg%3E");
+  }
+
+  html[lang="de-DE"] {
+  
+    & .lang-switcher .lang_de {
+      opacity: 1;
+      z-index: 1;
+    }
+    & .lang-switcher:hover .lang_de {
+      animation: flagout 0.3s ease forwards;
+    }
+    & .lang-switcher .lang_en {
+      z-index: 2;
+      opacity: 0;
+      transform: translateX(-100%);
+    }
+    & .lang-switcher:hover .lang_en {
+      animation: flagin 0.3s ease forwards;    
+    }
+  }
+  html[lang="en-GB"], 
+  html[lang="en-US"] {
+    & .lang-switcher .lang_en {
+      opacity: 1;
+      z-index: 1;
+    }
+    & .lang-switcher:hover .lang_en {
+      animation: flagout 0.3s ease forwards;
+    }
+    & .lang-switcher .lang_de {
+      z-index: 2;
+      opacity: 0;
+      transform: translateX(-100%);
+    }
+    & .lang-switcher:hover .lang_de {
+      animation: flagin 0.3s ease forwards;    
+    }
+  }
+  
+  @keyframes flagin {
+    0% {
+      opacity: 0;
+      transform: translateX(-30%) translateY(30%);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(10%) translateY(0%);
+    }
+  }
+  @keyframes flagout {
+    0% {
+      opacity: 1;
+      scale: 1;
+      transform: translateX(0) translateY(0);
+    }
+    100% {
+      opacity: .5;
+      scale: 1;
+      transform: translateX(-30%) translateY(30%);
+    }
+  }
+}
+@media (max-width: 599.9px) {
+
+  .lang-switcher {
+    position: relative;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    order: -1;
+    z-index: 100001;
+    opacity: 0;
+  }
+  .fixednav:has( .is-menu-open) .lang-switcher {
+    opacity: 1;
+    position: fixed;
+    background-color: var(--wp--preset--color--contrast);
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 1rem 2rem;
+  }
+
+  html[lang="de-DE"] {
+  
+    & .lang-switcher .lang_de {
+      z-index: 1;
+      opacity: .75;
+      border-bottom: 2px solid;
+      pointer-events: none;
+    }
+    & .lang-switcher .lang_en {
+      opacity: 1;
+      z-index: 2;
+      border-bottom: 2px solid transparent;
+    }
+  }
+  html[lang="en-GB"], 
+  html[lang="en-US"] {
+    & .lang-switcher .lang_en {
+      z-index: 1;
+      opacity: .75;
+      border-bottom: 2px solid;
+      pointer-events: none;
+    }
+    & .lang-switcher .lang_de {
+      opacity: 1;
+      z-index: 2;
+      border-bottom: 2px solid transparent;
+    }
+  }
+
+  .is-layout-flex:has(.wp-block-navigation + .lang-switcher) {
+    & .wp-block-navigation {
+      order: 2;
+    }
+    & .lang-switcher {
+      order: 1;
+      margin: 0 .5rem 0 0;
+    }
+  }
+  .wp-block-navigation__responsive-container {
+    margin-top: 1rem!important;
+  }
+}
+/* -------------------------- */
+/* END Custom Language Switcher */
+/* -------------------------- */
