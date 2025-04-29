@@ -32,10 +32,8 @@ import './editor.scss';
 export default function Edit() {
 	return (
 		<div { ...useBlockProps() }>
-			<p class="lang-switcher">
-          <a class="lang_de" href="/">Deutsch</a>
-          <a class="lang_en" href="/">Englisch</a>
-      </p>
+      <a class="lang_de" href="/">Deutsch</a>
+      <a class="lang_en" href="/">Englisch</a>
 		</div>
 	);
 }
