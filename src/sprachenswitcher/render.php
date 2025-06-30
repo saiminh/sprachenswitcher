@@ -18,9 +18,6 @@
         'force_home' => 0,            // Don't force the home page
         'echo' => 0                   // Don't echo, just return
       ));
-      echo '<!-- Debug: ';
-      print_r($langs_array);
-      echo ' -->';
       
       foreach ($langs_array as $lang) : ?>
         <a class="lang_<?php esc_html_e( $lang['slug']); ?>" href="<?php esc_html_e( $lang['url'] ); ?>"><?php esc_html_e( $lang['name'] ); ?></a>
